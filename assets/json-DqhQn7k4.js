@@ -1,0 +1,1 @@
+const r=e=>typeof e=="object"&&e!==null&&!Array.isArray(e),n=e=>r(e)&&Object.getPrototypeOf(e)===Object.prototype,t=e=>e===null||typeof e=="string"||typeof e=="boolean"?!0:typeof e=="number"?Number.isFinite(e):Array.isArray(e)?e.every(t):n(e)&&Object.values(e).every(t);export{t as a,n as b,r as i};

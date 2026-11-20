@@ -1,0 +1,37 @@
+<Scene format="hero-scene" version="1">
+  <SceneUI src="ui/scene.xml"/>
+  <Settings background="#1f2e5b">
+    <fog color="#182442" near="60" far="260"/>
+    <postfx toneMapping="aces" exposure="0.55">
+      <color enabled="false" brightness="-0.03" contrast="1.15" saturation="0.35" tint="#7f9bd6"/>
+      <vignette enabled="true" offset="1" darkness="1.3"/>
+      <film enabled="true" intensity="0.25" grayscale="false"/>
+      <bloom enabled="true" strength="0.25" radius="0.7" threshold="2.5"/>
+    </postfx>
+  </Settings>
+  <Entity id="camera" name="攝影機">
+    <Transform position="-2.92 18.69 -45.94" rotation="-171.187055 -5.589890 -179.134786"/>
+    <Camera fov="55" far="1000"/>
+  </Entity>
+  <Entity id="sky-light" name="天空光">
+    <Transform position="0 1 0"/>
+    <Light kind="hemisphere" color="#ffe8c8" intensity="1.2" groundColor="#6b5236"/>
+  </Entity>
+  <Entity id="sun" name="太陽">
+    <Transform position="60 80 40" rotation="-63.434949 33.854515 48.091152"/>
+    <Light intensity="2.5" color="#fff1d6"/>
+  </Entity>
+  <Entity id="ghost-ship" name="沙漠幽靈船">
+    <Transform/>
+    <Model url="models/ghost_ship_desert/ghost_ship_desert.glb"/>
+  </Entity>
+  <Entity id="moon" name="月亮">
+    <Transform position="195 120 333"/>
+    <MeshRenderer>
+      <geometry circle="12 96"/>
+      <material>
+        <basic color="#fff4e0" fog="false"/>
+      </material>
+    </MeshRenderer>
+  </Entity>
+</Scene>
